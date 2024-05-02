@@ -9,16 +9,21 @@ FEATURES
 3. Dynamic Sidebar: The sidebar dynamically displays available users for messaging.
 
 Technologies Used
+
 Frontend:
-1 React.js
-2 Socket.io Client
+
+1. React.js
+2. Socket.io Client
+
 Backend:
-1 Node.js
-2 Express.js
-3 Socket.io
-4 MongoDB 
+
+1. Node.js
+2. Express.js
+3. Socket.io
+4. MongoDB 
 
 USAGE
-1.Register or log in to the application.
-2.Set your status as "available" or "busy".
-3.Start messaging with available users in the sidebar.
+
+1. Register or log in to the application.
+2. Set your status as "available" or "busy".
+3. Start messaging with available users in the sidebar.
