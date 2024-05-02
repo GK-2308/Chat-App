@@ -52,9 +52,9 @@ npm run dev
 6. .env.sample
 
 PORT=
-PASSWORD=
-JWT_SECRET=
-NODE_ENV=
+- PASSWORD=
+- JWT_SECRET=
+- NODE_ENV=
 
 
 
