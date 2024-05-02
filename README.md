@@ -43,7 +43,7 @@ Message Routes
 - Description: Sends a message from the authenticated user to another user.
 - Request Parameters: id: String (required) - ID of the recipient user.
 - Request Body: message: String (required) - Content of the message.
-- Response: 200: Successfully sent the message.,500: Internal server error.
+- Response: 200: Successfully sent the message.,500: Internal server error
 
 
 
