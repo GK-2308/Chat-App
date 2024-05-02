@@ -27,3 +27,36 @@ USAGE
 1. Register or log in to the application.
 2. Set your status as "available" or "busy".
 3. Start messaging with available users in the sidebar.
+
+Installation
+
+1. Clone the repository:
+git clone <repository-url>
+
+2. Navigate to the project directory:
+cd Chat-App
+
+3. Install dependencies:
+npm install
+
+4. Set up the backend:
+- Configure MongoDB connection in server/config/db.js.
+- Start the server
+npm run server
+
+5. Set up frontend
+- Update backend API endpoints in src/api/index.js.
+- Start the React development server
+npm run dev
+
+6. .env.sample
+
+PORT=
+PASSWORD=
+JWT_SECRET=
+NODE_ENV=
+
+
+
+
+
