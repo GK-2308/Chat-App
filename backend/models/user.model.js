@@ -25,6 +25,11 @@ const userSchema = new mongoose.Schema(
 			type: String,
 			default: "",
 		},
+		status: {
+			type: String,
+			enum: ['available', 'busy'],
+			default: 'available'
+		},
 		// createdAt, updatedAt => Member since <createdAt>
 	},
 	{ timestamps: true }

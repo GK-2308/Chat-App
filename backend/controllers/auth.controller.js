@@ -31,7 +31,9 @@ export const signup = async (req, res) => {
 			password: hashedPassword,
 			gender,
 			profilePic: gender === "male" ? boyProfilePic : girlProfilePic,
+			status:'available'
 		});
+	
 
 		if (newUser) {
 			// Generate JWT token here
@@ -43,6 +45,7 @@ export const signup = async (req, res) => {
 				fullName: newUser.fullName,
 				username: newUser.username,
 				profilePic: newUser.profilePic,
+				status: newUser.status,
 			});
 		} else {
 			res.status(400).json({ error: "Invalid user data" });
@@ -62,6 +65,10 @@ export const login = async (req, res) => {
 		if (!user || !isPasswordCorrect) {
 			return res.status(400).json({ error: "Invalid username or password" });
 		}
+		// Set online status to 'AVAILABLE' when user logs in
+		user.status = 'available';
+		await user.save();
+	
 
 		generateTokenAndSetCookie(user._id, res);
 
@@ -70,6 +77,7 @@ export const login = async (req, res) => {
 			fullName: user.fullName,
 			username: user.username,
 			profilePic: user.profilePic,
+			status: user.status,
 		});
 	} catch (error) {
 		console.log("Error in login controller", error.message);
